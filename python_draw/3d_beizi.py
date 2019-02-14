@@ -7,7 +7,7 @@ from OpenGL.GLUT import *
 def drawFunc():
     # 清楚之前画面
     glClear(GL_COLOR_BUFFER_BIT)
-    glRotatef(0.1, 0, 5, 0)  # (角度,x,y,z)
+    glRotatef(5, 5, 5, 5)  # (角度,x,y,z)
     glutWireTeapot(0.5)
     # 刷新显示
     glFlush()
