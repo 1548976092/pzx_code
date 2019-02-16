@@ -1,0 +1,8 @@
+prefix=/home/pzx/pzx_git/third/ros/pzx_first_ros/install
+
+Name: beginner_tutorials_first
+Description: Description of beginner_tutorials_first
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pzx/pzx_git/third/ros/pzx_first_ros/install/lib 
+Requires: 

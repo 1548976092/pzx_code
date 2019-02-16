@@ -1,0 +1,2 @@
+beginner_tutorials_pzx
+-DCATKIN_DEVEL_PREFIX=/home/pzx/pzx_git/third/ros/pzx_second_ros/devel -DCMAKE_INSTALL_PREFIX=/home/pzx/pzx_git/third/ros/pzx_second_ros/install -G Unix Makefiles
