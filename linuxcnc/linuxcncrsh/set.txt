@@ -1,0 +1,50 @@
+help set
+Usage:
+  Set <LinuxCNC command>
+  Set commands require that a hello has been successfully negotiated,
+  in most instances requires that control be enabled by the connection.
+  The set commands not requiring control enabled are:
+    Comm_mode <mode>
+    Comm_prot <protocol>
+    Echo <On | Off>
+    Enable <Pwd | Off>
+    Verbose <On | Off>
+
+  The set commands requiring control enabled are:
+    Abort
+    Angular_unit_conversion <Deg | Rad | Grad | Auto | Custom>
+    Brake <On | Off>
+    Debug <Debug level>
+    EStop <On | Off>
+    Feed_override <Percent>
+    Flood <On | Off>
+    Home <Axis No>
+    Jog <Axis No, Speed>
+    Jog_incr <Axis No, Speed, Distance>
+    Jog_stop
+    Linear_unit_conversion <Inch | CM | MM | Auto | Custom>
+    Load_tool_table <Table name>
+    Lube <On | Off>
+    Machine <On | Off>
+    MDI <MDI String>
+    Mist <On | Off>
+    Mode <Manual | Auto | MDI>
+    Open <File path / name>
+    Optional_stop <none | 0 | 1>
+    Override_limits <On | Off>
+    Pause
+    Probe
+    Probe_clear
+    Resume
+    Run <Line No>
+    SetWait <Time>
+    Spindle <Increase | Decrease | Forward | Reverse | Constant | Off>
+    Spindle_override <percent>
+    Step
+    Task_plan_init
+    Teleop_enable
+    Timeout <Time>
+    Tool_offset <Offset>
+    Update <On | Off>
+    Wait <Time>
+

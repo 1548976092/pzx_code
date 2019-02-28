@@ -1,0 +1,14 @@
+hello EMC EMCNETSVR EMC
+set enable EMCTOO
+set estop off
+set machine on
+set home 0
+set home 1
+set home 2
+set home 3
+set home 4
+set home 5
+
+set mode auto
+set open puma_cube.ngc
+set run
