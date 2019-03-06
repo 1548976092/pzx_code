@@ -123,6 +123,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/pzx/pzx_git/third/ros/pzx_third_ros/build/gtest/cmake_install.cmake")
   include("/home/pzx/pzx_git/third/ros/pzx_third_ros/build/beginner_tutorials/cmake_install.cmake")
+  include("/home/pzx/pzx_git/third/ros/pzx_third_ros/build/usb_cam/cmake_install.cmake")
 
 endif()
 

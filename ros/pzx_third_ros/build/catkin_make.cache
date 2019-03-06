@@ -1,2 +1,2 @@
-beginner_tutorials
+beginner_tutorials:usb_cam
 -DCATKIN_DEVEL_PREFIX=/home/pzx/pzx_git/third/ros/pzx_third_ros/devel -DCMAKE_INSTALL_PREFIX=/home/pzx/pzx_git/third/ros/pzx_third_ros/install -G Unix Makefiles

@@ -917,6 +917,595 @@ clean: beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory usb_cam
+
+# Convenience name for "all" pass in the directory.
+usb_cam/all: usb_cam/CMakeFiles/usb_cam_node.dir/all
+usb_cam/all: usb_cam/CMakeFiles/usb_cam.dir/all
+
+.PHONY : usb_cam/all
+
+# Convenience name for "clean" pass in the directory.
+usb_cam/clean: usb_cam/CMakeFiles/usb_cam_node.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/usb_cam.dir/clean
+
+.PHONY : usb_cam/clean
+
+# Convenience name for "preinstall" pass in the directory.
+usb_cam/preinstall:
+
+.PHONY : usb_cam/preinstall
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/usb_cam_node.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/usb_cam_node.dir/all: usb_cam/CMakeFiles/usb_cam.dir/all
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node.dir/build.make usb_cam/CMakeFiles/usb_cam_node.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node.dir/build.make usb_cam/CMakeFiles/usb_cam_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num=14,15 "Built target usb_cam_node"
+.PHONY : usb_cam/CMakeFiles/usb_cam_node.dir/all
+
+# Include target in all.
+all: usb_cam/CMakeFiles/usb_cam_node.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/usb_cam_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/usb_cam_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/usb_cam_node.dir/rule
+
+# Convenience name for target.
+usb_cam_node: usb_cam/CMakeFiles/usb_cam_node.dir/rule
+
+.PHONY : usb_cam_node
+
+# clean rule for target.
+usb_cam/CMakeFiles/usb_cam_node.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node.dir/build.make usb_cam/CMakeFiles/usb_cam_node.dir/clean
+.PHONY : usb_cam/CMakeFiles/usb_cam_node.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/usb_cam_node.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# clean rule for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# clean rule for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_nodejs"
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_nodejs: usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_srvs_generate_messages_nodejs
+
+# clean rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# clean rule for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# clean rule for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# clean rule for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# clean rule for target.
+usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_eus
+
+# clean rule for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# clean rule for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_cpp"
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_cpp: usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+.PHONY : std_srvs_generate_messages_cpp
+
+# clean rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# clean rule for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# clean rule for target.
+usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_eus"
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_eus: usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+.PHONY : std_srvs_generate_messages_eus
+
+# clean rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_lisp"
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_lisp: usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+.PHONY : std_srvs_generate_messages_lisp
+
+# clean rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_py"
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_py: usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+.PHONY : std_srvs_generate_messages_py
+
+# clean rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/usb_cam.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/usb_cam.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam.dir/build.make usb_cam/CMakeFiles/usb_cam.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam.dir/build.make usb_cam/CMakeFiles/usb_cam.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles --progress-num=12,13 "Built target usb_cam"
+.PHONY : usb_cam/CMakeFiles/usb_cam.dir/all
+
+# Include target in all.
+all: usb_cam/CMakeFiles/usb_cam.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/usb_cam.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/usb_cam.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pzx/pzx_git/third/ros/pzx_third_ros/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/usb_cam.dir/rule
+
+# Convenience name for target.
+usb_cam: usb_cam/CMakeFiles/usb_cam.dir/rule
+
+.PHONY : usb_cam
+
+# clean rule for target.
+usb_cam/CMakeFiles/usb_cam.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam.dir/build.make usb_cam/CMakeFiles/usb_cam.dir/clean
+.PHONY : usb_cam/CMakeFiles/usb_cam.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/usb_cam.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

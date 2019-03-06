@@ -1,0 +1,8 @@
+prefix=/home/pzx/pzx_git/third/ros/pzx_third_ros/install
+
+Name: usb_cam
+Description: Description of usb_cam
+Version: 0.3.6
+Cflags: -I/home/pzx/pzx_git/third/ros/pzx_third_ros/install/include
+Libs: -L/home/pzx/pzx_git/third/ros/pzx_third_ros/install/lib -lusb_cam
+Requires: 
