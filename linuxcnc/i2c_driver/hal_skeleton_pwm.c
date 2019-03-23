@@ -258,7 +258,7 @@ void get_i2cdev()
         char read_start_buf[1];   
         char rbuf[1000] = {0};  
         printf("pzx i2c\n");
-        if((file = open(filename, O_RDWR)) < 0)  
+        if((file = rtapi_open_as_root(filename, O_RDWR)) < 0)  
         {  
                 perror("Failed to open i2c device.\n");  
                 exit(1);  
@@ -295,7 +295,7 @@ int rtapi_app_main(void)
     num_ports = 16;
     n = 0; /* port number */
 
-//	get_i2cdev();
+	get_i2cdev();
     /* STEP 1: initialise the driver */
     comp_id = hal_init("hal_skeleton_pwm");
     if (comp_id < 0) {
