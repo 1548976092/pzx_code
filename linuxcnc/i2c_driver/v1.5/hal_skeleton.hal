@@ -1,0 +1,10 @@
+
+loadrt hal_skeleton_pwm
+loadrt threads name1=fast period1=100000000
+
+
+addf  skeleton.0.write fast
+
+show
+
+start
