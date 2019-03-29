@@ -1,0 +1,27 @@
+
+#loadrt hal_gpio_h3_nanopi_m1 output_pins=3,5,7,8,11,12,15,16 input_pins=18
+loadrt threads name1=fast period1=50000 name2=slow period2=1000000
+
+loadrt hal_gpio_h3_nanopi_m1 output_pins=3,5,40 
+
+addf hal_gpio_h3_nanopi_m1.write fast
+addf hal_gpio_h3_nanopi_m1.read fast
+
+loadrt pwmgen output_type=0
+
+addf pwmgen.update slow
+addf pwmgen.make-pulses fast
+
+setp pwmgen.0.pwm-freq 50
+#setp pwmgen.0.value 1000
+setp pwmgen.0.enable true
+setp pwmgen.0.scale 5000
+
+setp pwmgen.0.offset 0.08
+
+setp pwmgen.0.min-dc 0.03
+setp pwmgen.0.max-dc 0.11
+
+net spindle-pwm pwmgen.0.pwm => hal_gpio_h3_nanopi_m1.pin-40-out
+start
+
