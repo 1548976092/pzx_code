@@ -1,4 +1,4 @@
-/********************************************************************
+ /********************************************************************
 * Description: trivkins.c
 *   general trivkins for 3 axis Cartesian machine
 *
@@ -24,6 +24,22 @@ struct data {
 
 #define SET(f) pos->f = joints[i]
 
+
+//只需从正解
+//Vf =               y          + z*L/2
+//Vl = -x*cos(30°) - y*sin(30°) + z*L/2
+//Vr =  x*cos(30°) - y*sin(30°) + z*L/2 
+
+//反推即可得到
+//x = (    - Vl + Vr) / (2 * cos(30°))
+//y = (2Vf - Vl - Vr) /  3
+//z = ( Vf + Vl + Vr) *  2 /   (3L)
+double L=1;
+
+#define VX_VALUE 0.5f //(0.5f)
+#define VY_VALUE 0.72f //(sqrt(3)/2.0) 
+#define L_value 1.0f // 0.2/角速度校准参数(0.915)
+
 int kinematicsForward(const double *joints,
 		      EmcPose * pos,
 		      const KINEMATICS_FORWARD_FLAGS * fflags,
@@ -38,9 +54,18 @@ a0 = joints[0];
 a1 = joints[1];
 a2 = joints[2];
 
-v0 =  a0 +      +a1*0      +a2*l;
-v1 = -a0*cos(45)-a1*sin(45)+a2*l;
-v2 = -a0*sin(45)+a1*cos(45)+a2*l;
+//v0 =  a0 +      +a1*0      +a2*l;
+//v1 = -a0*cos(45)-a1*sin(45)+a2*l;
+//v2 = -a0*sin(45)+a1*cos(45)+a2*l;
+
+//v0 = (      -a1 +a2)/(2*cos(30));
+//v1 = (2*a0  -a1 -a2)/3;
+//v2 = (  a0  +a1 +a2)*2*/(3*L);
+
+
+v0 = -(2.0*a2-a0-a1)/3.0;
+v1 = -(a0 - a1)/1.442;
+v2 = -(a0 + a1 + a2)/(L_value*3);
 
 pos->tran.x = v0;
 pos->tran.y = v1;
@@ -80,9 +105,25 @@ a0 =  pos->tran.x;
 a1 =  pos->tran.y;
 a2 =  pos->tran.z;
 
-v0 =  a0*cos(45)+sin(45)*a1+a2*0;
-v1 = -a0*sin(45)+a1*cos(45)+a2*0;
-v2 =  a0*0      +a1*0      +a2*1;
+//v0 =  a0*cos(45)+sin(45)*a1+a2*0;
+//v1 = -a0*sin(45)+a1*cos(45)+a2*0;
+//v2 =  a0*0      +a1*0      +a2*1;
+
+//Vf = y + z*L/2
+//Vl = -x*cos(30°) - y*sin(30°) + z*L/2
+//Vr = x*cos(30°) - y*sin(30°) + z*L/2 
+
+//v0 =               a1         + a2*L/2;
+//v1 = -a0*cos(30) - a1*sin(30) + a2*L/2;
+//v2 =  a0*cos(30) - a1*sin(30) + a2*L/2;
+
+//v0 =         1*a0 +      0  * a1 + L*a2;
+//v1 =  -cos(60)*a0 - sin(60) * a1 + L*a2;
+//v2 =  -sin(30)*a0 + cos(30) * a1 + L*a2;
+
+v0 = (-VX_VALUE*a1 + VY_VALUE*a0 + L_value*a2);//正解函数，具体推算过程请查看我的博客
+v1 = (-VX_VALUE*a1 - VY_VALUE*a0 + L_value*a2);
+v2 = (a1 + L_value*a2);
 
 joints[0] = v0;
 joints[1] = v1;
