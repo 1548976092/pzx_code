@@ -1,0 +1,17 @@
+Ubuntu armhf版本的源网址不同于普通Ubuntu系统，如果采用如下网址会出现问题，导致sudo apt-get update出现Error。由于默认采用的是国外的源，导致apt安装依赖包是奇慢无比，从网上找到了一个国内支持armhf的源，速度一下快了许多。
+
+deb http://mirrors.ustc.edu.cn/ubuntu-ports/ xenial main multiverse restricted universe
+deb http://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-backports main multiverse restricted universe
+deb http://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-proposed main multiverse restricted universe
+deb http://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-security main multiverse restricted universe
+deb http://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-updates main multiverse restricted universe
+deb-src http://mirrors.ustc.edu.cn/ubuntu-ports/ xenial main multiverse restricted universe
+deb-src http://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-backports main multiverse restricted universe
+deb-src http://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-proposed main multiverse restricted universe
+deb-src http://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-security main multiverse restricted universe
+deb-src http://mirrors.ustc.edu.cn/ubuntu-ports/ xenial-updates main multiverse restricted universe
+--------------------- 
+作者：ywueoei 
+来源：CSDN 
+原文：https://blog.csdn.net/ywueoei/article/details/80335799 
+版权声明：本文为博主原创文章，转载请附上博文链接！
