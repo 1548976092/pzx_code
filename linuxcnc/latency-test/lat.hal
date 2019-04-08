@@ -1,0 +1,18 @@
+taskset -c 3 halcmd loadrt threads name1=fast period1=25000 name2=slow period2=1000000
+taskset -c 3 halcmd loadrt timedelta count=2
+taskset -c 3 halcmd addf timedelta.0 fast
+taskset -c 3 halcmd addf timedelta.1 slow
+taskset -c 3 halcmd start
+
+taskset -c 0 halcmd loadusr -Wn lat pyvcp lat.xml
+
+taskset -c 3 halcmd net sl timedelta.1.max       lat.sl
+taskset -c 3 halcmd net sj timedelta.1.jitter    lat.sj
+taskset -c 3 halcmd net st timedelta.1.out       lat.st
+taskset -c 3 halcmd net bl timedelta.0.max       lat.bl
+taskset -c 3 halcmd net bj timedelta.0.jitter    lat.bj
+taskset -c 3 halcmd net bt timedelta.0.out       lat.bt
+taskset -c 3 halcmd net reset lat.reset          timedelta.0.reset timedelta.1.reset
+taskset -c 0 halcmd waitusr lat
+taskset -c 0 halcmd loadusr -w bash latexit.sh
+
