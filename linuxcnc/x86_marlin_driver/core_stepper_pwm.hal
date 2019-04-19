@@ -1,0 +1,110 @@
+# core HAL config file for steppers
+
+# first load the core RT modules that will be needed
+# kinematics
+loadrt [KINS]KINEMATICS
+# motion controller, get name and thread periods from ini file
+loadrt [EMCMOT]EMCMOT base_period_nsec=[EMCMOT]BASE_PERIOD servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS
+# stepper module, three step generators, all three using step/dir
+#loadrt stepgen step_type=0,0,0,0,0,0,0,0,0
+
+# hook functions to base thread (high speed thread for step generation)
+#addf stepgen.make-pulses base-thread
+
+# hook functions to servo thread
+#addf stepgen.capture-position servo-thread
+addf motion-command-handler servo-thread
+addf motion-controller servo-thread
+#addf stepgen.update-freq servo-thread
+
+
+net Xpos joint.0.motor-pos-cmd =>  joint.0.motor-pos-fb
+net Ypos joint.1.motor-pos-cmd => joint.1.motor-pos-fb
+net Zpos joint.2.motor-pos-cmd => joint.2.motor-pos-fb
+net Apos joint.3.motor-pos-cmd => joint.3.motor-pos-fb
+net Bpos joint.4.motor-pos-cmd => joint.4.motor-pos-fb
+net Cpos joint.5.motor-pos-cmd => joint.5.motor-pos-fb
+net Upos joint.6.motor-pos-cmd => joint.6.motor-pos-fb
+net Vpos joint.7.motor-pos-cmd => joint.7.motor-pos-fb
+net Wpos joint.8.motor-pos-cmd => joint.8.motor-pos-fb
+
+# connect position commands from motion module to step generator
+#net Xpos-cmd joint.0.motor-pos-cmd => stepgen.0.position-cmd
+#net Ypos-cmd joint.1.motor-pos-cmd => stepgen.1.position-cmd
+#net Zpos-cmd joint.2.motor-pos-cmd => stepgen.2.position-cmd
+#net Apos-cmd joint.3.motor-pos-cmd => stepgen.3.position-cmd 
+#net Bpos-cmd joint.4.motor-pos-cmd => stepgen.4.position-cmd 
+#net Cpos-cmd joint.5.motor-pos-cmd => stepgen.5.position-cmd 
+#net Upos-cmd joint.6.motor-pos-cmd => stepgen.6.position-cmd 
+#net Vpos-cmd joint.7.motor-pos-cmd => stepgen.7.position-cmd 
+#net Wpos-cmd joint.8.motor-pos-cmd => stepgen.8.position-cmd 
+
+# connect position feedback from step generators
+# to motion module
+#net Xpos-fb stepgen.0.position-fb => joint.0.motor-pos-fb
+#net Ypos-fb stepgen.1.position-fb => joint.1.motor-pos-fb
+#net Zpos-fb stepgen.2.position-fb => joint.2.motor-pos-fb
+#net Apos-fb stepgen.3.position-fb => joint.3.motor-pos-fb
+#net Bpos-fb stepgen.4.position-fb => joint.4.motor-pos-fb
+#net Cpos-fb stepgen.5.position-fb => joint.5.motor-pos-fb
+#net Upos-fb stepgen.6.position-fb => joint.6.motor-pos-fb
+#net Vpos-fb stepgen.7.position-fb => joint.7.motor-pos-fb
+#net Wpos-fb stepgen.8.position-fb => joint.8.motor-pos-fb
+
+
+# connect enable signals for step generators
+#net Xen joint.0.amp-enable-out => stepgen.0.enable
+#net Yen joint.1.amp-enable-out => stepgen.1.enable
+#net Zen joint.2.amp-enable-out => stepgen.2.enable
+#net Aen joint.3.amp-enable-out => stepgen.3.enable
+#net Ben joint.4.amp-enable-out => stepgen.4.enable
+#net Cen joint.5.amp-enable-out => stepgen.5.enable
+#net Uen joint.6.amp-enable-out => stepgen.6.enable
+#net Ven joint.7.amp-enable-out => stepgen.7.enable
+#net Wen joint.8.amp-enable-out => stepgen.8.enable
+
+
+# connect signals to step pulse generator outputs
+#net Xstep <= stepgen.0.step
+#net Xdir  <= stepgen.0.dir
+#net Ystep <= stepgen.1.step
+#net Ydir  <= stepgen.1.dir
+#net Zstep <= stepgen.2.step
+#net Zdir  <= stepgen.2.dir
+
+
+#net Astep <= stepgen.3.step
+#net Adir  <= stepgen.3.dir
+#net Bstep <= stepgen.4.step
+#net Bdir  <= stepgen.4.dir
+#net Cstep <= stepgen.5.step
+#net Cdir  <= stepgen.5.dir
+
+#net Ustep <= stepgen.6.step
+#net Udir  <= stepgen.6.dir
+#net Vstep <= stepgen.7.step
+#net Vdir  <= stepgen.7.dir
+#net Wstep <= stepgen.8.step
+#net Wdir  <= stepgen.8.dir
+
+# set stepgen module scaling - get values from ini file
+#setp stepgen.0.position-scale [JOINT_0]SCALE
+#setp stepgen.1.position-scale [JOINT_1]SCALE
+#setp stepgen.2.position-scale [JOINT_2]SCALE
+#setp stepgen.3.position-scale [JOINT_3]SCALE
+#setp stepgen.4.position-scale [JOINT_4]SCALE
+#setp stepgen.5.position-scale [JOINT_5]SCALE
+#setp stepgen.6.position-scale [JOINT_6]SCALE
+#setp stepgen.7.position-scale [JOINT_7]SCALE
+#setp stepgen.8.position-scale [JOINT_8]SCALE
+
+# set stepgen module accel limits - get values from ini file
+#setp stepgen.0.maxaccel [JOINT_0]STEPGEN_MAXACCEL
+#setp stepgen.1.maxaccel [JOINT_1]STEPGEN_MAXACCEL
+#setp stepgen.2.maxaccel [JOINT_2]STEPGEN_MAXACCEL
+#setp stepgen.3.maxaccel [JOINT_3]STEPGEN_MAXACCEL
+#setp stepgen.4.maxaccel [JOINT_4]STEPGEN_MAXACCEL
+#setp stepgen.5.maxaccel [JOINT_5]STEPGEN_MAXACCEL
+#setp stepgen.6.maxaccel [JOINT_6]STEPGEN_MAXACCEL
+#setp stepgen.7.maxaccel [JOINT_7]STEPGEN_MAXACCEL
+#setp stepgen.8.maxaccel [JOINT_8]STEPGEN_MAXACCEL
