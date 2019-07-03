@@ -1,5 +1,0 @@
-sudo apt-get install -y avahi-utils
-
-echo 123456 | sudo -S /etc/init.d/dbus start
-echo 123456 | sudo -S /etc/init.d/avahi-daemon start    
-. machinekit/scripts/rip-environment
