@@ -23,7 +23,7 @@ s********************************************************************/
                                 /* this also includes config.h */
 #include "hal.h"		/* HAL public API decls */
 #include "bcm2835.h"
-#include "cpuinfo.h"
+//#include "cpuinfo.h"
 
 #define BCM2708_PERI_BASE   0x20000000
 #define BCM2708_GPIO_BASE   (BCM2708_PERI_BASE + 0x200000)
