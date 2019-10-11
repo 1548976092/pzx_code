@@ -186,6 +186,7 @@ static int  setup_gpio_access(int rev, int ncores)
 {
   // open /dev/mem 
   if ((mem_fd = rtapi_open_as_root("/dev/mem", O_RDWR|O_SYNC) ) < 0) {
+// if ((mem_fd = open("/dev/mem", O_RDWR|O_SYNC) ) < 0) {
       rtapi_print_msg(RTAPI_MSG_ERR,"HAL_GPIO: can't open /dev/mem:  %d - %s",
 		      errno, strerror(errno));
     return -1;
