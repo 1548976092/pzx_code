@@ -1,0 +1,38 @@
+# first load the core RT modules that will be needed
+# kinematics
+loadrt [KINS]KINEMATICS
+# motion controller, get name and thread periods from ini file
+loadrt [EMCMOT]EMCMOT base_period_nsec=[EMCMOT]BASE_PERIOD servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS
+# stepper module, three step generators, all three using step/dir
+loadrt stepgen step_type=0 ctrl_type=p
+
+# hook functions to base thread (high speed thread for step generation)
+addf stepgen.make-pulses base-thread
+
+# hook functions to servo thread
+addf stepgen.capture-position servo-thread
+addf motion-command-handler servo-thread
+addf motion-controller servo-thread
+addf stepgen.update-freq servo-thread
+
+# connect position commands from motion module to step generator
+net Zpos-cmd joint.0.motor-pos-cmd => stepgen.0.position-cmd
+
+# connect position feedback from step generators
+# to motion module
+net Zpos-fb stepgen.0.position-fb => joint.0.motor-pos-fb
+
+# connect enable signals for step generators
+net Zen joint.0.amp-enable-out => stepgen.0.enable
+
+# connect signals to step pulse generator outputs
+net Zstep <= stepgen.0.step
+net Zdir  <= stepgen.0.dir
+
+
+# set stepgen module scaling - get values from ini file
+setp stepgen.0.position-scale [JOINT_0]SCALE
+
+# set stepgen module accel limits - get values from ini file
+setp stepgen.0.maxaccel [JOINT_0]STEPGEN_MAXACCEL
+
