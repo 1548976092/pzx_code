@@ -4,8 +4,8 @@ loadrt hal_gpio dir=0x337FFFF exclude=0xA3E1
 addf hal_gpio.read base-thread 1
 addf hal_gpio.write base-thread -1
 
-net Xstep => hal_gpio.pin-36-out
-net Xdir => hal_gpio.pin-35-out
+net Zstep => hal_gpio.pin-36-out
+net Zdir => hal_gpio.pin-35-out
 
 
 # create a signal for the estop loopback
@@ -15,4 +15,4 @@ net tool-prep-loop iocontrol.0.tool-prepare iocontrol.0.tool-prepared
 net tool-change-loop iocontrol.0.tool-change iocontrol.0.tool-changed
 
 
-net xhome hal_gpio.pin-15-in => joint.0.home-sw-in  joint.0.pos-lim-sw-in
+net Zhome hal_gpio.pin-15-in => joint.0.home-sw-in  joint.0.pos-lim-sw-in
