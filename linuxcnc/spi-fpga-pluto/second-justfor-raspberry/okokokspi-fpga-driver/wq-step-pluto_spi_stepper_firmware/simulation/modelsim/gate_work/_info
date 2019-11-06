@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/pzx_linuxcnc/spi-fpga-driver-master/pluto_spi_stepper_firmware/simulation/modelsim
+vhard_block
+Z1 !s110 1571729285
+!i10b 1
+!s100 m=JcQ84alcaXb_BJReIj03
+IHQ`1P5Y>EoRTgXBk:2GSb0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1571729254
+Z4 8pluto_spi_stepper.vo
+Z5 Fpluto_spi_stepper.vo
+L0 2610
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1571729285.000000
+Z8 !s107 pluto_spi_stepper.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|pluto_spi_stepper.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vstepgen
+R1
+!i10b 1
+!s100 VATZf<4U=L^ImKNQ1<EJI3
+I4>X2aHAH]MKZ31Bn_j0BM2
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vstepgen_tb
+R1
+!i10b 1
+!s100 GV<DB4]1lRBQYkfi6^nHI2
+Igzda]5;<H[[QmolkWfJ1b3
+R2
+R0
+w1571728425
+8D:/pzx_linuxcnc/spi-fpga-driver-master/pluto_spi_stepper_firmware/stepgen_tb.v
+FD:/pzx_linuxcnc/spi-fpga-driver-master/pluto_spi_stepper_firmware/stepgen_tb.v
+L0 22
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/pzx_linuxcnc/spi-fpga-driver-master/pluto_spi_stepper_firmware/stepgen_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/pzx_linuxcnc/spi-fpga-driver-master/pluto_spi_stepper_firmware|D:/pzx_linuxcnc/spi-fpga-driver-master/pluto_spi_stepper_firmware/stepgen_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+D:/pzx_linuxcnc/spi-fpga-driver-master/pluto_spi_stepper_firmware
+R12

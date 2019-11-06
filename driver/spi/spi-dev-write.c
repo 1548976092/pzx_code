@@ -21,6 +21,7 @@
 #include <linux/types.h>
 #include <linux/spi/spidev.h>
 
+
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
 
 static void pabort(const char *s)
@@ -28,18 +29,22 @@ static void pabort(const char *s)
     perror(s);
     abort();
 }
-
-static const char *device = "/dev/spidev0.1";
-static uint8_t mode = 3;
+volatile unsigned *spihold;
+static const char *device = "/dev/spidev0.0";
+static uint8_t mode = 0;
 static uint8_t bits = 8;
-static uint32_t speed = 1000000;
+static uint32_t speed = 500000;
 static uint16_t delay;
 
 static void transfer(int fd)
 {
     int ret;
     uint8_t tx[] = {
-                0x12, 0x34, 0x56, 0x78, 0x00, 0x00,0x00
+        0x01, 0x00,0x45,0x67,
+		0x89, 0xab,0xcd,0xef,
+        0x01, 0x23,0x45,0x67,
+		0x89, 0xab,0xcd,0xef,
+        0x01, 0x23,0x45,0x67
     };
     uint8_t rx[ARRAY_SIZE(tx)] = {0, };
     struct spi_ioc_transfer tr = {
@@ -50,7 +55,7 @@ static void transfer(int fd)
         .speed_hz = 0,
         .bits_per_word = 0,
     };
-
+printf("ARRAY_SIZE(tx):%d",ARRAY_SIZE(tx));
     ret = ioctl(fd, SPI_IOC_MESSAGE(1), &tr);
 //	write(fd, tx,5);
 //	read(fd, rx,5);
@@ -58,7 +63,7 @@ static void transfer(int fd)
         pabort("can't send spi message");
 
     for (ret = 0; ret < ARRAY_SIZE(tx); ret++) {
-        if (!(ret % 6))
+        if (!(ret % 4))
             puts("");
         printf("%.2X ", rx[ret]);
     }
@@ -123,6 +128,7 @@ void parse_opts(int argc, char *argv[])
             break;
         case 'O':
             mode |= SPI_CPOL;
+			printf("SPI_CPOL = 0x%x\n",SPI_CPOL);
             break;
         case 'L':
             mode |= SPI_LSB_FIRST;
@@ -147,8 +153,10 @@ int main(int argc, char *argv[])
 
     parse_opts(argc, argv);
     fd = open(device, O_RDWR);
-    if (fd < 0)
+	if (fd < 0)
         pabort("can't open device");
+	
+
 
     /* spi mode */
     ret = ioctl(fd, SPI_IOC_WR_MODE, &mode);
@@ -184,6 +192,5 @@ int main(int argc, char *argv[])
     transfer(fd);
 
     close(fd);
-
     return ret;
 }

@@ -1,0 +1,382 @@
+Power Analyzer report for pluto_spi_stepper
+Wed Nov 06 19:40:13 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Parallel Compilation
+  3. Power Analyzer Summary
+  4. Power Analyzer Settings
+  5. Indeterminate Toggle Rates
+  6. Operating Conditions Used
+  7. Thermal Power Dissipation by Block
+  8. Thermal Power Dissipation by Block Type
+  9. Thermal Power Dissipation by Hierarchy
+ 10. Core Dynamic Thermal Power Dissipation by Clock Domain
+ 11. Current Drawn from Voltage Supplies Summary
+ 12. VCCIO Supply Current Drawn by I/O Bank
+ 13. VCCIO Supply Current Drawn by Voltage
+ 14. Confidence Metric Details
+ 15. Signal Activities
+ 16. Power Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.36        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;  12.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Power Analyzer Summary                                                                    ;
++----------------------------------------+--------------------------------------------------+
+; Power Analyzer Status                  ; Successful - Wed Nov 06 19:40:13 2019            ;
+; Quartus Prime Version                  ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition      ;
+; Revision Name                          ; pluto_spi_stepper                                ;
+; Top-level Entity Name                  ; pluto_spi_stepper                                ;
+; Family                                 ; MAX 10                                           ;
+; Device                                 ; 10M08SCM153C8G                                   ;
+; Power Models                           ; Final                                            ;
+; Total Thermal Power Dissipation        ; 167.72 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 7.16 mW                                          ;
+; Core Static Thermal Power Dissipation  ; 121.30 mW                                        ;
+; I/O Thermal Power Dissipation          ; 39.27 mW                                         ;
+; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
++----------------------------------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Power Analyzer Settings                                                                                                  ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+; Option                                                           ; Setting                               ; Default Value ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+; Maximum processors allowed for parallel compilation              ; All                                   ;               ;
+; Use smart compilation                                            ; Off                                   ; Off           ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                                    ; On            ;
+; Enable compact report table                                      ; Off                                   ; Off           ;
+; Default Power Input I/O Toggle Rate                              ; 12.5%                                 ; 12.5%         ;
+; Preset Cooling Solution                                          ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ;               ;
+; Board thermal model                                              ; None (CONSERVATIVE)                   ;               ;
+; Default Power Toggle Rate                                        ; 12.5%                                 ; 12.5%         ;
+; Use vectorless estimation                                        ; On                                    ; On            ;
+; Use Input Files                                                  ; Off                                   ; Off           ;
+; Filter Glitches in VCD File Reader                               ; On                                    ; On            ;
+; Power Analyzer Report Signal Activity                            ; Off                                   ; Off           ;
+; Power Analyzer Report Power Dissipation                          ; Off                                   ; Off           ;
+; Device Power Characteristics                                     ; TYPICAL                               ; TYPICAL       ;
+; Automatically Compute Junction Temperature                       ; On                                    ; On            ;
+; Specified Junction Temperature                                   ; 25                                    ; 25            ;
+; Ambient Temperature                                              ; 25                                    ; 25            ;
+; Use Custom Cooling Solution                                      ; Off                                   ; Off           ;
+; Board Temperature                                                ; 25                                    ; 25            ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Indeterminate Toggle Rates                                                                                                    ;
++-------------------------------------------------------------------------------------------------+-----------------------------+
+; Node                                                                                            ; Reason                      ;
++-------------------------------------------------------------------------------------------------+-----------------------------+
+; pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0]                 ; No valid clock domain found ;
+; nRESET                                                                                          ; No valid clock domain found ;
+; clk_i                                                                                           ; No valid clock domain found ;
+; din[15]                                                                                         ; No valid clock domain found ;
+; din[7]                                                                                          ; No valid clock domain found ;
+; MOSI                                                                                            ; No valid clock domain found ;
+; din[14]                                                                                         ; No valid clock domain found ;
+; din[6]                                                                                          ; No valid clock domain found ;
+; SCK                                                                                             ; No valid clock domain found ;
+; SSEL                                                                                            ; No valid clock domain found ;
+; din[13]                                                                                         ; No valid clock domain found ;
+; din[5]                                                                                          ; No valid clock domain found ;
+; din[12]                                                                                         ; No valid clock domain found ;
+; din[4]                                                                                          ; No valid clock domain found ;
+; din[11]                                                                                         ; No valid clock domain found ;
+; din[3]                                                                                          ; No valid clock domain found ;
+; din[10]                                                                                         ; No valid clock domain found ;
+; din[2]                                                                                          ; No valid clock domain found ;
+; din[9]                                                                                          ; No valid clock domain found ;
+; din[1]                                                                                          ; No valid clock domain found ;
+; din[8]                                                                                          ; No valid clock domain found ;
+; din[0]                                                                                          ; No valid clock domain found ;
+; div2048[6]~20clkctrl                                                                            ; No valid clock domain found ;
+; pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0]~clkctrl         ; No valid clock domain found ;
+; pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0]~clkctrl_e_clk_o ; No valid clock domain found ;
++-------------------------------------------------------------------------------------------------+-----------------------------+
+
+
++--------------------------------------------------------------------------+
+; Operating Conditions Used                                                ;
++---------------------------------------------+----------------------------+
+; Setting                                     ; Value                      ;
++---------------------------------------------+----------------------------+
+; Device power characteristics                ; Typical                    ;
+;                                             ;                            ;
+; Voltages                                    ;                            ;
+;     VCCA                                    ; 3.00 V                     ;
+;     VCC_ONE                                 ; 3.00 V                     ;
+;     3.3-V LVTTL I/O Standard                ; 3.3 V                      ;
+;     3.3 V Schmitt Trigger I/O Standard      ; 3.3 V                      ;
+;                                             ;                            ;
+; Auto computed junction temperature          ; 29.3 degrees Celsius       ;
+;     Ambient temperature                     ; 25.0 degrees Celsius       ;
+;     Junction-to-Case thermal resistance     ; 11.00 degrees Celsius/Watt ;
+;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt  ;
+;     Heat Sink-to-Ambient thermal resistance ; 14.30 degrees Celsius/Watt ;
+;                                             ;                            ;
+; Board model used                            ; None                       ;
++---------------------------------------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block                                                                                                           ;
++------------+------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+; Block Name ; Block Type ; Total Thermal Power ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ;
++------------+------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+(1) The "Thermal Power Dissipation by Block" Table has been hidden. To show this table, please select the "Write power dissipation by block to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block Type                                                                                                                                                                            ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Block Type          ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; JTAG                ; 0.01 mW                           ; 0.00 mW                     ; --                             ; 0.01 mW                       ;    6.875                                                  ;
+; M9K                 ; 1.35 mW                           ; 1.34 mW                     ; --                             ; 0.01 mW                       ;    0.625                                                  ;
+; Combinational cell  ; 0.09 mW                           ; 0.08 mW                     ; --                             ; 0.02 mW                       ;    0.387                                                  ;
+; Clock control block ; 0.92 mW                           ; 0.00 mW                     ; --                             ; 0.92 mW                       ;    8.000                                                  ;
+; Register cell       ; 0.49 mW                           ; 0.29 mW                     ; --                             ; 0.20 mW                       ;    0.537                                                  ;
+; I/O register        ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
+; I/O                 ; 2.31 mW                           ; 0.31 mW                     ; 1.99 mW                        ; 0.00 mW                       ;    0.491                                                  ;
+; Voltage Regulator   ; 5.06 mW                           ; 4.30 mW                     ; 0.76 mW                        ; --                            ; --                                                        ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+(1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                                                                                                               ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                           ;
++------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |pluto_spi_stepper                                                                                                                       ; 10.22 mW (8.01 mW)                   ; 6.31 mW (4.61 mW)               ; 2.76 mW (2.76 mW)                 ; 1.15 mW (0.64 mW)                 ; |pluto_spi_stepper                                                                                                                                                                                                                                                                                                                                            ;
+;     |hard_block:auto_generated_inst                                                                                                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|hard_block:auto_generated_inst                                                                                                                                                                                                                                                                                                             ;
+;     |sld_hub:auto_hub                                                                                                                    ; 0.13 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ;
+;         |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric ; 0.13 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ;
+;             |alt_sld_fab:instrumentation_fabric                                                                                          ; 0.13 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ;
+;                 |alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                     ; 0.13 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                    ;
+;                     |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                         ; 0.13 mW (0.00 mW)                    ; 0.09 mW (0.00 mW)               ; --                                ; 0.04 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                        ;
+;                         |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                                                                    ; 0.13 mW (0.09 mW)                    ; 0.09 mW (0.06 mW)               ; --                                ; 0.04 mW (0.03 mW)                 ; |pluto_spi_stepper|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                           ;
+;                             |sld_rom_sr:hub_info_reg                                                                                     ; 0.02 mW (0.02 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg   ;
+;                             |sld_shadow_jsm:shadow_jsm                                                                                   ; 0.03 mW (0.03 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pluto_spi_stepper|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm ;
+;         |sld_jtag_interface_mod:\jtag_interface_mod_gen:device_family_mod_inst                                                           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_hub:auto_hub|sld_jtag_interface_mod:\jtag_interface_mod_gen:device_family_mod_inst                                                                                                                                                                                                                                                     ;
+;     |sld_signaltap:auto_signaltap_0                                                                                                      ; 2.08 mW (0.00 mW)                    ; 1.61 mW (0.00 mW)               ; --                                ; 0.47 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                             ;
+;         |sld_jtag_endpoint_adapter:\gen_jtag_signal_adapter:jtag_signal_adapter                                                          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_jtag_endpoint_adapter:\gen_jtag_signal_adapter:jtag_signal_adapter                                                                                                                                                                                                                                      ;
+;         |sld_signaltap_impl:sld_signaltap_body                                                                                           ; 2.08 mW (0.00 mW)                    ; 1.61 mW (0.00 mW)               ; --                                ; 0.47 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body                                                                                                                                                                                                                                                                       ;
+;             |sld_signaltap_implb:sld_signaltap_body                                                                                      ; 2.08 mW (0.34 mW)                    ; 1.61 mW (0.04 mW)               ; --                                ; 0.47 mW (0.30 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body                                                                                                                                                                                                                                ;
+;                 |sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst                                        ; 0.27 mW (0.00 mW)                    ; 0.13 mW (0.00 mW)               ; --                                ; 0.13 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst                                                                                                                                               ;
+;                     |lpm_counter:\adv_point_3_and_more:advance_pointer_counter                                                           ; 0.01 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter                                                                                     ;
+;                         |cntr_7rh:auto_generated                                                                                         ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter|cntr_7rh:auto_generated                                                             ;
+;                     |lpm_shiftreg:info_data_shift_out                                                                                    ; 0.04 mW (0.04 mW)                    ; 0.04 mW (0.04 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:info_data_shift_out                                                                                                              ;
+;                     |lpm_shiftreg:ram_data_shift_out                                                                                     ; 0.04 mW (0.04 mW)                    ; 0.03 mW (0.03 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ;
+;                     |lpm_counter:read_pointer_counter                                                                                    ; 0.13 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.12 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter                                                                                                              ;
+;                         |cntr_eki:auto_generated                                                                                         ; 0.13 mW (0.13 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.12 mW (0.12 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter|cntr_eki:auto_generated                                                                                      ;
+;                     |lpm_counter:status_advance_pointer_counter                                                                          ; 0.01 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter                                                                                                    ;
+;                         |cntr_8rh:auto_generated                                                                                         ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter|cntr_8rh:auto_generated                                                                            ;
+;                     |lpm_shiftreg:status_data_shift_out                                                                                  ; 0.04 mW (0.04 mW)                    ; 0.04 mW (0.04 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ;
+;                     |lpm_counter:status_read_pointer_counter                                                                             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter                                                                                                       ;
+;                         |cntr_odi:auto_generated                                                                                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter|cntr_odi:auto_generated                                                                               ;
+;                 |altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem                                                          ; 0.04 mW (0.04 mW)                    ; 0.03 mW (0.03 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem                                                                                                                                                                 ;
+;                     |lpm_mux:mux                                                                                                         ; 0.01 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux                                                                                                                                                     ;
+;                         |mux_t4c:auto_generated                                                                                          ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux|mux_t4c:auto_generated                                                                                                                              ;
+;                     |lpm_decode:wdecoder                                                                                                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder                                                                                                                                             ;
+;                         |decode_b7f:auto_generated                                                                                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder|decode_b7f:auto_generated                                                                                                                   ;
+;                 |altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram                                                                         ; 1.35 mW (0.00 mW)                    ; 1.34 mW (0.00 mW)               ; --                                ; 0.01 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram                                                                                                                                                                                ;
+;                     |altsyncram_6m14:auto_generated                                                                                      ; 1.35 mW (1.35 mW)                    ; 1.34 mW (1.34 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_6m14:auto_generated                                                                                                                                                 ;
+;                 |serial_crc_16:\tdo_crc_gen:tdo_crc_calc                                                                                 ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc                                                                                                                                                                                        ;
+;                 |sld_rom_sr:crc_rom_sr                                                                                                   ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ;
+;                 |sld_ela_control:ela_control                                                                                             ; 0.01 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control                                                                                                                                                                                                    ;
+;                     |sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm                              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm                                                                                                             ;
+;                         |sld_mbpmg:\trigger_modules_gen:0:trigger_match                                                                  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match                                                              ;
+;                             |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1                                                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1        ;
+;                         |lpm_shiftreg:trigger_condition_deserialize                                                                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|lpm_shiftreg:trigger_condition_deserialize                                                                  ;
+;                     |sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity                                                       ; 0.01 mW (0.00 mW)                    ; 0.01 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity                                                                                                                                      ;
+;                         |lpm_shiftreg:trigger_config_deserialize                                                                         ; 0.01 mW (0.01 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|lpm_shiftreg:trigger_config_deserialize                                                                                              ;
+;                     |lpm_shiftreg:trigger_config_deserialize                                                                             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|lpm_shiftreg:trigger_config_deserialize                                                                                                                                                            ;
+;                 |lpm_shiftreg:segment_offset_config_deserialize                                                                          ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:segment_offset_config_deserialize                                                                                                                                                                                 ;
+;                 |sld_buffer_manager:sld_buffer_manager_inst                                                                              ; 0.03 mW (0.03 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.01 mW (0.01 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst                                                                                                                                                                                     ;
+;                 |lpm_shiftreg:status_register                                                                                            ; 0.01 mW (0.01 mW)                    ; 0.01 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:status_register                                                                                                                                                                                                   ;
+;     |pll:pll_inst                                                                                                                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|pll:pll_inst                                                                                                                                                                                                                                                                                                                               ;
+;         |altpll:altpll_component                                                                                                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|pll:pll_inst|altpll:altpll_component                                                                                                                                                                                                                                                                                                       ;
+;             |pll_altpll:auto_generated                                                                                                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|pll:pll_inst|altpll:altpll_component|pll_altpll:auto_generated                                                                                                                                                                                                                                                                             ;
+;     |stepgen:s0                                                                                                                          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|stepgen:s0                                                                                                                                                                                                                                                                                                                                 ;
+;     |stepgen:s1                                                                                                                          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|stepgen:s1                                                                                                                                                                                                                                                                                                                                 ;
+;     |stepgen:s2                                                                                                                          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|stepgen:s2                                                                                                                                                                                                                                                                                                                                 ;
+;     |stepgen:s3                                                                                                                          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|stepgen:s3                                                                                                                                                                                                                                                                                                                                 ;
+;     |wdt:w                                                                                                                               ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |pluto_spi_stepper|wdt:w                                                                                                                                                                                                                                                                                                                                      ;
++------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+(1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
+
+(2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++------------------------------------------------------------------------+
+; Core Dynamic Thermal Power Dissipation by Clock Domain                 ;
++---------------------+-----------------------+--------------------------+
+; Clock Domain        ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
++---------------------+-----------------------+--------------------------+
+; altera_reserved_tck ; 10.00                 ; 2.84                     ;
+; No clock domain     ; 0.00                  ; 0.01                     ;
++---------------------+-----------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Current Drawn from Voltage Supplies Summary                                                                                        ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCIO          ; 12.02 mA                ; 0.09 mA                   ; 11.93 mA                 ; 12.02 mA                         ;
+; VCCA           ; 3.03 mA                 ; 0.00 mA                   ; 3.03 mA                  ; 3.03 mA                          ;
+; VCC_ONE        ; 39.79 mA                ; 2.39 mA                   ; 37.41 mA                 ; 39.79 mA                         ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
+
+
++-----------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by I/O Bank                                                        ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; I/O Bank ; VCCIO Voltage ; Total Current Drawn ; Dynamic Current Drawn ; Static Current Drawn ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; 1A       ; 3.3V          ; 1.60 mA             ; 0.00 mA               ; 1.60 mA              ;
+; 1B       ; 3.3V          ; 1.76 mA             ; 0.09 mA               ; 1.67 mA              ;
+; 2        ; 3.3V          ; 1.63 mA             ; 0.00 mA               ; 1.63 mA              ;
+; 3        ; 3.3V          ; 1.85 mA             ; 0.00 mA               ; 1.85 mA              ;
+; 4        ; --            ; --                  ; --                    ; --                   ;
+; 5        ; 3.3V          ; 1.73 mA             ; 0.00 mA               ; 1.73 mA              ;
+; 6        ; 3.3V          ; 1.69 mA             ; 0.00 mA               ; 1.69 mA              ;
+; 7        ; --            ; --                  ; --                    ; --                   ;
+; 8        ; 3.3V          ; 1.76 mA             ; 0.00 mA               ; 1.76 mA              ;
++----------+---------------+---------------------+-----------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by Voltage                                                                                             ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; 3.3V          ; 12.02 mA                ; 0.09 mA                   ; 11.93 mA                 ; 12.02 mA                         ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                          ;
++----------------------------------------------------------------------------------------+--------------+------------+---------------+---------------+
+; Data Source                                                                            ; Total        ; Pin        ; Registered    ; Combinational ;
++----------------------------------------------------------------------------------------+--------------+------------+---------------+---------------+
+; Simulation (from file)                                                                 ;              ;            ;               ;               ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)      ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)     ; 0 (0.0%)   ; 0 (0.0%)      ; 0 (0.0%)      ;
+;                                                                                        ;              ;            ;               ;               ;
+; Node, entity or clock assignment                                                       ;              ;            ;               ;               ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 3 (0.1%)     ; 1 (1.8%)   ; 0 (0.0%)      ; 2 (0.1%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 6 (0.2%)     ; 1 (1.8%)   ; 0 (0.0%)      ; 5 (0.3%)      ;
+;                                                                                        ;              ;            ;               ;               ;
+; Vectorless estimation                                                                  ;              ;            ;               ;               ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 2594 (98.8%) ; 28 (50.0%) ; 1032 (100.0%) ; 1534 (99.8%)  ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 66 (2.5%)    ; 3 (5.4%)   ; 14 (1.4%)     ; 49 (3.2%)     ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 2591 (98.7%) ; 28 (50.0%) ; 1032 (100.0%) ; 1531 (99.6%)  ;
+;                                                                                        ;              ;            ;               ;               ;
+; Default assignment                                                                     ;              ;            ;               ;               ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 2 (0.1%)     ; 2 (3.6%)   ; 0 (0.0%)      ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 28 (1.1%)    ; 27 (48.2%) ; 0 (0.0%)      ; 1 (0.1%)      ;
+;                                                                                        ;              ;            ;               ;               ;
+; Assumed 0                                                                              ;              ;            ;               ;               ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 26 (1.0%)    ; 25 (44.6%) ; 0 (0.0%)      ; 1 (0.1%)      ;
++----------------------------------------------------------------------------------------+--------------+------------+---------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Activities                                                                                                                           ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+; Signal ; Type ; Toggle Rate (millions of transitions / sec) ; Toggle Rate Data Source ; Static Probability ; Static Probability Data Source ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+(1) The "Signal Activity" Table has been hidden. To show this table, please select the "Write signal activities to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++-------------------------+
+; Power Analyzer Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Power Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Nov 06 19:40:07 2019
+Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off pluto_spi_stepper -c pluto_spi_stepper
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity sld_hub
+        Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
+        Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'pluto_spi_stepper.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Warning (332060): Node: clk_i was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register stepgen:s0|position[0] is being clocked by clk_i
+Warning (332060): Node: div2048[0] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|is_buffer_wrapped_once_sig is being clocked by div2048[0]
+Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
+Warning (332056): PLL cross checking found inconsistent PLL clock settings:
+    Warning (332056): Node: pll_inst|altpll_component|auto_generated|pll1|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 83.333
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From altera_reserved_tck (Rise) to altera_reserved_tck (Rise) (setup and hold)
+    Critical Warning (332169): From altera_reserved_tck (Rise) to altera_reserved_tck (Fall) (setup and hold)
+Info (223000): Starting Vectorless Power Activity Estimation
+Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
+Info (223001): Completed Vectorless Power Activity Estimation
+Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (215049): Average toggle rate for this design is 0.474 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 167.72 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Wed Nov 06 19:40:13 2019
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
+
+

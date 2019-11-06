@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Wed Nov 06 19:40:13 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : pluto_spi_stepper
+Top-level Entity Name : pluto_spi_stepper
+Family : MAX 10
+Device : 10M08SCM153C8G
+Power Models : Final
+Total Thermal Power Dissipation : 167.72 mW
+Core Dynamic Thermal Power Dissipation : 7.16 mW
+Core Static Thermal Power Dissipation : 121.30 mW
+I/O Thermal Power Dissipation : 39.27 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data
