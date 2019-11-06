@@ -1,4 +1,0 @@
-Warning (10273): Verilog HDL warning at spi_main.v(44): extended using "x" or "z" File: C:/Users/15489/Documents/linuxcnc/4-spi-fpga-driver/pluto_spi_stepper_firmware/spi_main.v Line: 44
-Warning (10273): Verilog HDL warning at spi_main.v(45): extended using "x" or "z" File: C:/Users/15489/Documents/linuxcnc/4-spi-fpga-driver/pluto_spi_stepper_firmware/spi_main.v Line: 45
-Warning (10273): Verilog HDL warning at spi_main.v(46): extended using "x" or "z" File: C:/Users/15489/Documents/linuxcnc/4-spi-fpga-driver/pluto_spi_stepper_firmware/spi_main.v Line: 46
-Info (10281): Verilog HDL Declaration information at spi_main.v(21): object "W" differs only in case from object "w" in the same scope File: C:/Users/15489/Documents/linuxcnc/4-spi-fpga-driver/pluto_spi_stepper_firmware/spi_main.v Line: 21
