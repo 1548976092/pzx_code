@@ -1,0 +1,63 @@
+# components
+loadrt conv_float_u32
+#loadrt siggen
+loadrt pluto_mix_rpspi
+loadrt threads name1=test-thread period1=1000000
+#loadrt not count=3
+
+#addf not.0 test-thread
+#addf not.1 test-thread
+#addf not.2 test-thread
+
+
+addf pluto-mix-rpspi.transfer test-thread
+#addf pluto-mix-rpspi.spitest  test-thread
+
+#addf siggen.0.update test-thread
+#setp siggen.0.amplitude 2000
+#setp siggen.0.offset 2000
+#setp siggen.0.frequency 0.4
+
+setp pluto-mix-rpspi.stepgen.0.enable 1
+setp pluto-mix-rpspi.stepgen.0.scale 1
+
+
+#setp pluto-mix-rpspi.stepgen.1.enable 1
+#setp pluto-mix-rpspi.stepgen.1.scale 1
+
+#setp pluto-mix-rpspi.stepgen.2.enable 1
+#setp pluto-mix-rpspi.stepgen.2.scale 1
+
+#loadusr halmeter pin pluto-mix-rpspi.stepgen.0.counts  -g 0 1050
+#loadusr halmeter param pluto-mix-rpspi.debug-0 -g 300 1050
+#loadusr halmeter param pluto-mix-rpspi.debug-1 -g 600 1050
+#loadusr halmeter pin pluto-mix-rpspi.stepgen.0.position-fb  -g 900 1050
+
+net a pluto-mix-rpspi.din.00 =>  pluto-mix-rpspi.dout.00
+net b pluto-mix-rpspi.din.01 =>  pluto-mix-rpspi.dout.01
+net c pluto-mix-rpspi.din.02 =>  pluto-mix-rpspi.dout.02
+net d pluto-mix-rpspi.din.03 =>  pluto-mix-rpspi.dout.03
+
+net e pluto-mix-rpspi.din.04 =>  pluto-mix-rpspi.dout.04
+net f pluto-mix-rpspi.din.05 =>  pluto-mix-rpspi.dout.05
+net g pluto-mix-rpspi.din.06 =>  pluto-mix-rpspi.dout.06
+net h pluto-mix-rpspi.din.07 =>  pluto-mix-rpspi.dout.07
+
+net h =>  pluto-mix-rpspi.dout.08 
+
+
+
+setp pluto-mix-rpspi.stepgen.stepspace 0
+setp pluto-mix-rpspi.stepgen.steplen 0
+setp pluto-mix-rpspi.stepgen.dirtime 1000
+
+#addf conv-float-u32.0 test-thread 
+#net p  conv-float-u32.0.in    <=    pluto-mix-rpspi.stepgen.0.position-fb
+
+start
+
+
+#setp pluto-mix-rpspi.stepgen.0.position-cmd 200
+#setp pluto-mix-rpspi.stepgen.0.position-cmd 2000
+#setp pluto-mix-rpspi.stepgen.0.position-cmd 20
+setp pluto-mix-rpspi.pwm.enable 1

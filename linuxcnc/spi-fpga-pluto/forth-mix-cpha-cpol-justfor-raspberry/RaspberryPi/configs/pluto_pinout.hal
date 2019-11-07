@@ -1,0 +1,64 @@
+# first load the core RT modules that will be needed
+# kinematics
+loadrt [KINS]KINEMATICS
+#autoconverted  trivkins
+#loadrt gearkins coordinates=XYZ kinstype=b
+# motion controller, get name and thread periods from ini file
+loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS 
+
+
+
+#loadrt pluto_step speedrange=0 TOF=pluto_stepper_opendrain
+loadrt pluto_step_rpspi
+addf pluto-step-rpspi.transfer servo-thread
+addf motion-command-handler servo-thread
+addf motion-controller servo-thread
+
+setp pluto-step-rpspi.stepgen.0.scale [JOINT_0]SCALE
+setp pluto-step-rpspi.stepgen.1.scale [JOINT_1]SCALE
+setp pluto-step-rpspi.stepgen.2.scale [JOINT_2]SCALE
+
+setp pluto-step-rpspi.stepgen.step-polarity 0
+
+net Xpos-cmd joint.0.motor-pos-cmd => pluto-step-rpspi.stepgen.0.position-cmd
+net Ypos-cmd joint.1.motor-pos-cmd => pluto-step-rpspi.stepgen.1.position-cmd
+net Zpos-cmd joint.2.motor-pos-cmd => pluto-step-rpspi.stepgen.2.position-cmd
+
+net Xpos-fb pluto-step-rpspi.stepgen.0.position-fb => joint.0.motor-pos-fb
+net Ypos-fb pluto-step-rpspi.stepgen.1.position-fb => joint.1.motor-pos-fb
+net Zpos-fb pluto-step-rpspi.stepgen.2.position-fb => joint.2.motor-pos-fb
+
+net Xen joint.0.amp-enable-out => pluto-step-rpspi.stepgen.0.enable 
+#pluto-step-rpspi.dout.00
+net Yen joint.1.amp-enable-out => pluto-step-rpspi.stepgen.1.enable
+net Zen joint.2.amp-enable-out => pluto-step-rpspi.stepgen.2.enable
+
+# create a signal for the estop loopback
+net estop-loop iocontrol.0.user-enable-out iocontrol.0.emc-enable-in
+
+# create signals for tool prepare loopback
+net tool-prep-loop iocontrol.0.tool-prepare iocontrol.0.tool-prepared
+
+# create a signal for "spindle on"
+#net spindle_on spindle.0.on => pluto-step-rpspi.dout.00
+
+setp pluto-step-rpspi.stepgen.steplen 0
+setp pluto-step-rpspi.stepgen.dirtime 0
+#tap 分频系数
+setp pluto-step-rpspi.stepgen.stepspace 0
+
+
+#setp pluto-step-rpspi.stepgen.steplen   0
+#setp pluto-step-rpspi.stepgen.stepspace 0
+#setp pluto-step-rpspi.stepgen.dirtime   0
+
+#net XHome pluto-step-rpspi.din.08-not => joint.0.home-sw-in joint.0.pos-lim-sw-in
+net a  pluto-step-rpspi.din.00 => pluto-step-rpspi.dout.00
+net b  pluto-step-rpspi.din.01 => pluto-step-rpspi.dout.01  
+net c  pluto-step-rpspi.din.02 => pluto-step-rpspi.dout.02  
+net d  pluto-step-rpspi.din.03 => pluto-step-rpspi.dout.03  
+
+net e  pluto-step-rpspi.din.04 => pluto-step-rpspi.dout.04
+net f  pluto-step-rpspi.din.05 => pluto-step-rpspi.dout.05
+net g  pluto-step-rpspi.din.06 => pluto-step-rpspi.dout.06
+net h  pluto-step-rpspi.din.07 => pluto-step-rpspi.dout.07
