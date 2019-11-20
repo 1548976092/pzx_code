@@ -1,0 +1,10 @@
+loadrt hostmot2 
+loadrt hm2_rpspi 
+loadrt threads name1=test-thread period1=10000000
+
+
+addf MESA5I25.0.write test-thread
+addf MESA5I25.0.read test-thread    
+
+start
+
